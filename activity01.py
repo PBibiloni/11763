@@ -20,7 +20,7 @@ def estimate_noisy_pixels(img: np.ndarray):
 
 def power_of_signal(signal_or_img: np.ndarray):
     """ Compute the power of a signal. """
-    return np.sqrt(np.average(np.square(signal_or_img)))
+    return np.average(np.square(signal_or_img))
 
 
 def contrast_of_signal(signal_or_img: np.ndarray):
