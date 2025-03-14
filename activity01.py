@@ -14,7 +14,7 @@ def load_dcm(filepath: str):
 def estimate_noisy_pixels(img: np.ndarray):
     """ Estimate the noisy pixels in the background of an image. """
     noise_threshold = 300  # Medido en [T1]
-    noise_mask = (img_rest < noise_threshold) * (img_rest > 0)
+    noise_mask = (img < noise_threshold) * (img > 0)
     return noise_mask
 
 
