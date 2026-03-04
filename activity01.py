@@ -30,12 +30,12 @@ def contrast_of_signal(signal_or_img: np.ndarray):
 
 def compute_snr(signal_power: float, noise_power: float):
     """ Compute the signal-to-noise ratio (SNR) of a signal. """
-    return np.sqrt(signal_power) / np.sqrt(noise_power)
+    return signal_power / noise_power
 
 
 def compute_cnr(signal_contrast: float, noise_power: float):
     """ Compute the contrast-to-noise ratio (CNR) of a signal. """
-    return signal_contrast / np.sqrt(noise_power)
+    return signal_contrast / noise_power
 
 
 if __name__ == '__main__':
